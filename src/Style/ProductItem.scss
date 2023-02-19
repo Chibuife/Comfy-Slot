@@ -1,0 +1,168 @@
+@import "./StyleVariables/Variables.scss";
+
+.productItemBody {
+    color: $clr-grey-1;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    button {
+        margin-top: 3rem;
+        cursor: pointer;
+        border: none;
+        padding: 10px;
+        color: $clr-primary-10;
+        background-color: $clr-primary-5;
+        border-radius: 5px;
+        font-size: clamp(0.5rem, 2vw, 0.8rem);
+        transition: all 0.3s ease-in;
+    }
+
+    .cBtn:hover {
+        background-color: $clr-primary-7;
+        color: $clr-grey-1;
+    }
+
+
+    section {
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        margin-top: 2rem;
+
+        article {
+            width: 100%;
+            height: 35rem;
+
+            >img {
+                width: 100%;
+                height: 85%;
+                border-radius: 10px;
+            }
+
+            .subimage {
+                width: 100%;
+                height: 15%;
+                display: flex;
+                justify-content: space-between;
+
+                div {
+                    width: 18%;
+                    height: 80%;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    object-fit: cover;
+                    cursor: pointer;
+
+                    // border: 2px solid black;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                    }
+                }
+
+                .activeImage {
+                    border: 2px solid $clr-primary-5;
+                }
+            }
+
+            h1 {
+                font-size: 2.7rem;
+                margin-bottom: 10px;
+                font-size: clamp(1rem, 5vw, 2.5rem);
+            }
+
+            .star {
+                color: rgb(255, 185, 0);
+            }
+
+            .price {
+                color: $clr-primary-5;
+            }
+
+            h4 {
+                font-size: clamp(0.5rem, 7vw, 1rem);
+            }
+
+            p {
+                color: $clr-grey-3;
+                font-size: clamp(0.5rem, 5vw, 1rem);
+            }
+            .border{
+                border-bottom: 1px solid $clr-grey-8;
+            }
+            h4>span {
+                font-weight: 100;
+                text-transform: capitalize;
+                color: $clr-grey-3;
+                font-size: clamp(0.5rem, 5vw, 1rem);
+            }
+
+            .colors {
+                width: 200px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                button {
+                    margin-top: 0;
+                    border-radius: 100%;
+                    border: none;
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                    padding: 0px;
+                    font-size: 1.3rem;
+                }
+
+                .red {
+                    background-color: red;
+                }
+
+                .blue {
+                    background-color: blue;
+                }
+
+                .green {
+                    background-color: green;
+                }
+
+                .blue {
+                    background-color: black;
+                }
+
+                .yellow {
+                    background-color: yellow;
+                }
+            }
+
+            .numberofitem {
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                font-size: 2rem;
+
+                .button {
+                    cursor: pointer;
+                    user-select: none;
+                }
+
+                .input {
+                    margin: 0px 2px;
+                    font-weight: 700;
+                    border: none;
+                    background: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .productItemBody {
+    margin: 0;
+    }
+}

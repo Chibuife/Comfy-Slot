@@ -1,0 +1,34 @@
+$backgroundColor: white;
+$clr-primary-9: #decbc0;
+$clr-grey-1: #102a42;
+$clr-grey-5: #617d98;
+$clr-primary-5: #ab7a5f;
+$clr-primary-10: #eaded7;
+$clr-grey-10: #f1f5f8;
+$clr-primary-1: #453227;
+$clr-primary-3: #795744;
+$clr-primary-7: #c5a491;
+$transition: all 0.3s linear;
+$clr-primary-6: #b99179;
+$clr-primary-7: #c5a491;
+$clr-grey-8: #bcccdc;
+$clr-grey-3: #324d67;
+$clr-grey-1: #102a42;
+@mixin section1 {
+    width: 100%;
+    height: 150px;
+    background-color: $clr-primary-10;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    margin-bottom: 5rem;
+
+    h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        color: $clr-primary-1;
+
+        .home {
+            color: $clr-primary-3;
+        }
+    }
+}

@@ -1,0 +1,180 @@
+.cartBody {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  position: relative;
+}
+
+.cartBody .menu-list {
+  padding: 20px;
+  border-bottom: 1px solid black;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.cartBody .sectionOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cartBody .sectionOne .delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: blue;
+  font-size: 20px;
+  color: white;
+  width: 20px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-top: 8rem;
+}
+
+.cartBody .sectionOne table {
+  width: 100%;
+  text-align: center;
+  padding-top: 5rem;
+  border-bottom: 1px solid #080708;
+  border-collapse: collapse;
+}
+
+.cartBody .sectionOne table th {
+  border-bottom: 1px solid #080708;
+}
+
+.cartBody .sectionOne table td {
+  padding: 3rem 0;
+}
+
+.cartBody .sectionOne table th {
+  padding: 3rem 0;
+  font-weight: lighter;
+}
+
+.cartBody .list .numbeOfItems {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.cartBody .list .numbeOfItems .count {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.cartBody .list-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+.cartBody .list-description span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cartBody .list-description button {
+  margin-top: 3px;
+  margin-left: 5px;
+  width: 13px;
+  height: 13px;
+  border: none;
+  border-radius: 5px;
+}
+
+.cartBody .list-description h4 {
+  margin: 0;
+}
+
+.cartBody .list-description > img {
+  width: 100px;
+  height: 70px;
+  border-radius: 3px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 10px;
+}
+
+.cartBody .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.cartBody .buttons button {
+  cursor: pointer;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+}
+
+.cartBody .sectionTwo {
+  position: relative;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.cartBody .sectionTwo table {
+  width: 350px;
+  text-align: left;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 30px;
+  position: absolute;
+  right: 0;
+}
+
+.cartBody .sectionTwo table td {
+  padding: 5px;
+}
+
+.cartBody .sectionTwo table th {
+  padding: 5px;
+}
+
+.cartBody .sectionTwo table .shipping td {
+  border-bottom: 1px solid black;
+}
+
+.cartBody .sectionTwo table button {
+  width: 100%;
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.cartBody .sectionTwo table .total {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cartBody .sectionTwo table .total td {
+  padding: 10px;
+}
+/*# sourceMappingURL=Cart.css.map */

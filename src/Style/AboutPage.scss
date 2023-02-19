@@ -1,0 +1,74 @@
+@import "./StyleVariables/Variables.scss";
+.bodyAbout{
+  
+    .section1{
+        @include section1
+    }
+
+    .section2{
+        display: flex;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .aboutImgContainer{
+            width: 45%;
+            height: 500px;
+            img{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            object-fit: fill;
+                    }
+        }
+        .aboutDescriptionContainer{
+             height: 500px;
+            width: 50%;
+            h1{
+                color: #102a42;
+                font-size: clamp(2rem, 5vw, 2.5rem);
+            }
+            .heading{
+                height: 6vw;
+                width: 40vw;
+                // background-color: red;
+            }
+            .line{
+                margin-top: 0.5rem;
+                height: 5%;
+                width: 15%;
+                background-color: $clr-primary-5;  
+            }
+            p{
+                color: $clr-grey-5;
+                line-height: 2rem;
+                font-size: clamp(0.8rem, 10vw, 1rem);
+            }
+        }
+    }
+
+}
+
+@media (max-width: 990px) {
+    .bodyAbout .section2 .aboutDescriptionContainer .heading {
+        height: 20vw;
+        width: 50vw;
+    }
+    .bodyAbout .section2 .aboutImgContainer {
+        width: 100%;
+        height: 500px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+        }
+    }
+    .bodyAbout .section2 .aboutDescriptionContainer .line {
+        width: 40%;
+    }
+    .bodyAbout .section2 .aboutDescriptionContainer{
+        width: 100%;
+    }
+
+}

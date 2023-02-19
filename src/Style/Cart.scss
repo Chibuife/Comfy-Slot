@@ -1,0 +1,161 @@
+.cartBody {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    // background-color: red;
+    height: 100vh;
+    position: relative;
+
+    .menu-list {
+        padding: 20px;
+        border-bottom: 1px solid black;
+        padding-left: 250px;
+        padding-right: 250px;
+    }
+
+    .sectionOne {
+        display: flex;
+        align-items: center;
+
+        .delete {
+            display: flex;
+            align-items: center;
+            background-color: blue;
+            font-size: 20px;
+            color: white;
+            width: 20px;
+            height: 25px;
+            border: none;
+            cursor: pointer;
+            border-radius: 2px;
+            margin-top: 8rem;
+        }
+    }
+
+    .sectionOne table {
+        width: 100%;
+        text-align: center;
+        padding-top: 5rem;
+        border-bottom: 1px solid rgb(8, 7, 8);
+        border-collapse: collapse;
+
+        th {
+            border-bottom: 1px solid rgb(8, 7, 8);
+        }
+
+        td {
+            padding: 3rem 0;
+        }
+
+        th {
+            padding: 3rem 0;
+            font-weight: lighter;
+        }
+    }
+
+    .list {
+        .numbeOfItems {
+
+            font-size: 2rem;
+            font-weight: 500;
+
+            .count {
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+    }
+
+    .list-description {
+        display: flex;
+        align-items: center;
+        text-align: left;
+
+        span {
+
+            display: flex;
+            align-items: center;
+        }
+
+        button {
+            margin-top: 3px;
+            margin-left: 5px;
+            width: 13px;
+            height: 13px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        h4 {
+            margin: 0;
+        }
+
+        >img {
+            width: 100px;
+            height: 70px;
+            border-radius: 3px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 3rem;
+
+        button {
+            cursor: pointer;
+            padding: 8px;
+            border: none;
+            border-radius: 3px;
+        }
+    }
+
+    .sectionTwo {
+        position: relative;
+        width: 100%;
+        margin-top: 3rem;
+        table {
+            width: 350px;
+            text-align: left;
+            border-radius: 5px;
+            border: 1px solid black;
+            padding: 30px;
+            position: absolute;
+            right: 0;
+            td {
+                padding: 5px;
+            }
+
+            th {
+                padding: 5px;
+            }
+
+            .shipping {
+
+                td {
+                    border-bottom: 1px solid black;
+                }
+            }
+
+            button {
+                width: 100%;
+                cursor: pointer;
+                padding: 5px;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .total {
+                font-size: 1.5rem;
+                font-weight: 700;
+
+                td {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

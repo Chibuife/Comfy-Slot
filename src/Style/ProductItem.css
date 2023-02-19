@@ -1,0 +1,188 @@
+.productItemBody {
+  color: #102a42;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productItemBody button {
+  margin-top: 3rem;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: #eaded7;
+  background-color: #ab7a5f;
+  border-radius: 5px;
+  font-size: clamp(0.5rem, 2vw, 0.8rem);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.productItemBody .cBtn:hover {
+  background-color: #c5a491;
+  color: #102a42;
+}
+
+.productItemBody section {
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem;
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 2rem;
+}
+
+.productItemBody section article {
+  width: 100%;
+  height: 35rem;
+}
+
+.productItemBody section article > img {
+  width: 100%;
+  height: 85%;
+  border-radius: 10px;
+}
+
+.productItemBody section article .subimage {
+  width: 100%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.productItemBody section article .subimage div {
+  width: 18%;
+  height: 80%;
+  border-radius: 5px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+.productItemBody section article .subimage div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.productItemBody section article .subimage .activeImage {
+  border: 2px solid #ab7a5f;
+}
+
+.productItemBody section article h1 {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+  font-size: clamp(1rem, 5vw, 2.5rem);
+}
+
+.productItemBody section article .star {
+  color: #ffb900;
+}
+
+.productItemBody section article .price {
+  color: #ab7a5f;
+}
+
+.productItemBody section article h4 {
+  font-size: clamp(0.5rem, 7vw, 1rem);
+}
+
+.productItemBody section article p {
+  color: #324d67;
+  font-size: clamp(0.5rem, 5vw, 1rem);
+}
+
+.productItemBody section article .border {
+  border-bottom: 1px solid #bcccdc;
+}
+
+.productItemBody section article h4 > span {
+  font-weight: 100;
+  text-transform: capitalize;
+  color: #324d67;
+  font-size: clamp(0.5rem, 5vw, 1rem);
+}
+
+.productItemBody section article .colors {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.productItemBody section article .colors button {
+  margin-top: 0;
+  border-radius: 100%;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  padding: 0px;
+  font-size: 1.3rem;
+}
+
+.productItemBody section article .colors .red {
+  background-color: red;
+}
+
+.productItemBody section article .colors .blue {
+  background-color: blue;
+}
+
+.productItemBody section article .colors .green {
+  background-color: green;
+}
+
+.productItemBody section article .colors .blue {
+  background-color: black;
+}
+
+.productItemBody section article .colors .yellow {
+  background-color: yellow;
+}
+
+.productItemBody section article .numberofitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.productItemBody section article .numberofitem .button {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.productItemBody section article .numberofitem .input {
+  margin: 0px 2px;
+  font-weight: 700;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+@media (max-width: 400px) {
+  .productItemBody {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=ProductItem.css.map */

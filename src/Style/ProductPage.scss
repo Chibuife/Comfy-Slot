@@ -1,0 +1,392 @@
+@import "./StyleVariables/Variables.scss";
+
+.section1 {
+    @include section1
+}
+
+.productBody {
+    .section2 {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        width: 100%;
+        height: 100vh;
+
+        // background-color: aqua;
+        ul {
+            list-style: none;
+        }
+
+        .sideBar {
+            width: 100%;
+            height: 100%;
+        }
+
+        .classify {
+            margin-left: 30%;
+            position: relative;
+        }
+
+        main {
+            // width: 100%;
+            height: 100%;
+            // background-color: blue;
+            position: relative;
+        }
+
+        .sortContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+
+            .thinline {
+                height: 1px;
+                width: 30%;
+                background-color: $clr-grey-8;
+            }
+
+            img {
+                // color: white;
+                // fill: white;
+                // stroke: white;
+                // background-color: white;
+                // fill: white;
+                // background-color: white;
+                // color: white !important; 
+
+                // filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+
+                // .svg{
+                //     color: white;
+                //     fill: white;
+                // }
+                // svg[Attributes Style] {
+
+                // }
+
+            }
+        }
+
+        .container {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100vh;
+            // background-color: red;
+            padding-top: 3rem;
+        }
+
+        .imagContainer {
+            height: 100%;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+
+            width: 100%;
+            // background-color: orange;
+            overflow-y: scroll;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+
+            .image-price {
+                width: 100%;
+                height: 200px;
+                grid-column-end: auto;
+                position: relative;
+
+                .black {
+                    border-radius: 5px;
+                    height: 90%;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 2;
+                    // background-color: rgba(0, 0, 0, 0.3);
+                    // transition: all 0.5s linear;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+
+                .searchContainer {
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 50px;
+                    background-color: $clr-primary-5;
+                    cursor: pointer;
+                    position: absolute;
+                    z-index: 100;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .img {
+                        height: 50%;
+                        width: 50%;
+                        position: absolute;
+                        z-index: 10;
+                    }
+                }
+
+                .item-image {
+                    width: 100%;
+                    height: 90%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .pic {
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 5px;
+                        filter: brightness(100%);
+                        transition: all 0.5s;
+
+                    }
+                }
+
+                .hover {
+                    transition: all 0.5s;
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    filter: brightness(50%);
+                }
+            }
+
+            .none {
+                display: none;
+            }
+
+            .priceing {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                .price {
+                    color: $clr-primary-5;
+                }
+            }
+        }
+
+        .imagContainer::-webkit-scrollbar {
+            display: none;
+            overflow: hidden;
+        }
+    }
+}
+
+.display-none {
+    display: none;
+}
+
+
+.imagContainerTwo {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 100%;
+    width: 100%;
+
+    // background-color: orange;
+    .image-price {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+
+        .priceing {
+            line-height: 2.5rem;
+            width: 60%;
+            // background-color: red;
+            padding-top: 1rem;
+        }
+
+        p {
+            line-height: 1rem;
+        }
+
+        .detail {
+            background-color: $clr-primary-5;
+            width: 50px;
+            height: initial;
+            vertical-align: middle;
+            line-height: 1rem;
+            margin-top: 1.1rem;
+            cursor: pointer;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 3px;
+            border-radius: 3px;
+            font-size: 10px;
+        }
+
+        .detail:hover {
+            background-color: $clr-primary-7;
+            color: $clr-grey-1;
+            transition: all 0.5s;
+        }
+    }
+}
+
+.imagContainerTwo::-webkit-scrollbar {
+    display: none;
+}
+
+.image {
+    width: 300px;
+    height: 200px;
+    margin-right: 1rem;
+}
+
+.image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.section2 .sideBar select option.red {
+    background-color: red;
+
+}
+
+
+// cartegory button design
+
+.category {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        background-color: transparent;
+        border: none;
+        text-align: start;
+        width: 80px;
+        padding-bottom: 7px;
+        margin-bottom: 7px;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    button:hover {
+        box-shadow: 0px 1px 0px black;
+    }
+}
+
+// color button design
+.color {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+
+   
+
+    .All {
+        background-color: transparent;
+        border: none;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    .All:hover {
+        box-shadow: 0px 1px 0px black;
+    }
+
+    .red {
+        color: transparent;
+        background-color: red;
+        border: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .black {
+        color: transparent;
+        background-color: black;
+        border: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .green {
+        color: transparent;
+        background-color: green;
+        border: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .blue {
+        color: transparent;
+        background-color: blue;
+        border: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    .yellow {
+        color: transparent;
+        background-color: yellow;
+        border: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+}
+
+.clear {
+    cursor: pointer;
+}
+
+.freeShiping {
+    cursor: pointer;
+}
+
+//adding padding and margin
+h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 990px) {
+    .productBody .section2 {
+        .classify {
+            // margin-left: auto;
+            // margin-right: auto;
+        }
+    }
+
+    .color {
+        width: 35%;
+    }
+}
+
+@media (max-width: 800px) {
+    .productBody .section2 {
+        grid-template-columns: 1fr;
+
+        .classify {
+            width: 70%;
+            margin-left: 5%;
+        }
+    }
+}

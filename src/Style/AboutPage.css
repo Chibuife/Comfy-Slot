@@ -1,0 +1,101 @@
+.bodyAbout .section1 {
+  width: 100%;
+  height: 150px;
+  background-color: #eaded7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10%;
+  margin-bottom: 5rem;
+}
+
+.bodyAbout .section1 h1 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  color: #453227;
+}
+
+.bodyAbout .section1 h1 .home {
+  color: #795744;
+}
+
+.bodyAbout .section2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bodyAbout .section2 .aboutImgContainer {
+  width: 45%;
+  height: 500px;
+}
+
+.bodyAbout .section2 .aboutImgContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.bodyAbout .section2 .aboutDescriptionContainer {
+  height: 500px;
+  width: 50%;
+}
+
+.bodyAbout .section2 .aboutDescriptionContainer h1 {
+  color: #102a42;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.bodyAbout .section2 .aboutDescriptionContainer .heading {
+  height: 6vw;
+  width: 40vw;
+}
+
+.bodyAbout .section2 .aboutDescriptionContainer .line {
+  margin-top: 0.5rem;
+  height: 5%;
+  width: 15%;
+  background-color: #ab7a5f;
+}
+
+.bodyAbout .section2 .aboutDescriptionContainer p {
+  color: #617d98;
+  line-height: 2rem;
+  font-size: clamp(0.8rem, 10vw, 1rem);
+}
+
+@media (max-width: 990px) {
+  .bodyAbout .section2 .aboutDescriptionContainer .heading {
+    height: 20vw;
+    width: 50vw;
+  }
+  .bodyAbout .section2 .aboutImgContainer {
+    width: 100%;
+    height: 500px;
+  }
+  .bodyAbout .section2 .aboutImgContainer img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .bodyAbout .section2 .aboutDescriptionContainer .line {
+    width: 40%;
+  }
+  .bodyAbout .section2 .aboutDescriptionContainer {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=AboutPage.css.map */

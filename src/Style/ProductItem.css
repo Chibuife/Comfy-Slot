@@ -6,7 +6,6 @@
 }
 
 .productItemBody button {
-  margin-top: 3rem;
   cursor: pointer;
   border: none;
   padding: 10px;
@@ -145,7 +144,7 @@
   background-color: green;
 }
 
-.productItemBody section article .colors .blue {
+.productItemBody section article .colors .black {
   background-color: black;
 }
 

@@ -93,10 +93,6 @@ function Homepage() {
             </div>
             </div>
         </section>
-
-        <section className='sectionFive'>
-            <div className='copyRight'> <span className='data'> © 2023 </span> <span className='comfy'>ComfySloth</span> <span className='right'>All rights reserved</span></div>
-        </section>
     </div>
   )
 }

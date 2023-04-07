@@ -4,9 +4,6 @@ import AboutImage from "./Aboutimg/aboutImg.jpeg"
 function About() {
   return (
     <div className='bodyAbout'>
-        <section className='section1'>
-            <h1> <span className='home'> Home </span>/About</h1>
-        </section>
         <section className='section2'>
             <div className='aboutImgContainer'>
                 <img src={AboutImage} alt="" />

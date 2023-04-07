@@ -1,6 +1,4 @@
 .body {
-  margin-left: auto;
-  margin-right: auto;
   background-color: white;
   max-width: 1500px;
   max-height: 100%;
@@ -423,38 +421,6 @@
 }
 
 .body .sectionFour .subscribe .emailInput div:hover {
-  color: white;
-}
-
-.body .sectionFive {
-  background-color: black;
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.body .sectionFive .copyRight {
-  height: 40px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.body .sectionFive .copyRight .data {
-  color: white;
-}
-
-.body .sectionFive .copyRight .comfy {
-  color: #ab7a5f;
-}
-
-.body .sectionFive .copyRight .right {
   color: white;
 }
 

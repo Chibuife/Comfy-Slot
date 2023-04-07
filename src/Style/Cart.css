@@ -37,7 +37,6 @@
   border: none;
   cursor: pointer;
   border-radius: 2px;
-  margin-top: 8rem;
 }
 
 .cartBody .sectionOne table {
@@ -176,5 +175,55 @@
 
 .cartBody .sectionTwo table .total td {
   padding: 10px;
+}
+
+.cartBody .red {
+  color: transparent;
+  background-color: red;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.cartBody .black {
+  color: transparent;
+  background-color: black;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.cartBody .green {
+  color: transparent;
+  background-color: green;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.cartBody .blue {
+  color: transparent;
+  background-color: blue;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.cartBody .yellow {
+  color: transparent;
+  background-color: yellow;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
 }
 /*# sourceMappingURL=Cart.css.map */

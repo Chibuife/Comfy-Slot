@@ -28,7 +28,6 @@
             border: none;
             cursor: pointer;
             border-radius: 2px;
-            margin-top: 8rem;
         }
     }
 
@@ -158,4 +157,54 @@
             }
         }
     }
+          .red {
+              color: transparent;
+              background-color: red;
+              border: none;
+              width: 20px;
+              height: 20px;
+              border-radius: 100%;
+              cursor: pointer;
+          }
+    
+          .black {
+              color: transparent;
+              background-color: black;
+              border: none;
+              width: 20px;
+              height: 20px;
+              border-radius: 100%;
+              cursor: pointer;
+          }
+    
+          .green {
+              color: transparent;
+              background-color: green;
+              border: none;
+              width: 20px;
+              height: 20px;
+              border-radius: 100%;
+              cursor: pointer;
+          }
+    
+          .blue {
+              color: transparent;
+              background-color: blue;
+              border: none;
+              width: 20px;
+              height: 20px;
+              border-radius: 100%;
+              cursor: pointer;
+          }
+    
+          .yellow {
+              color: transparent;
+              background-color: yellow;
+              border: none;
+              width: 20px;
+              height: 20px;
+              border-radius: 100%;
+              cursor: pointer;
+          }
+                
 }

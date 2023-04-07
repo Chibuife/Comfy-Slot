@@ -1,14 +1,12 @@
 @import "./StyleVariables/Variables.scss";
 
 .body{
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
     background-color: $backgroundColor;
-    // position: relative;
     max-width: 1500px;
     max-height: 100%;
-    color: $clr-grey-1;
-    
+    color: $clr-grey-1;    
     .sectionOne{
         background-color: $backgroundColor;
         height: 90vh;
@@ -342,28 +340,7 @@
             }
         }
     }
-    .sectionFive{
-        background-color: black;
-        height: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .copyRight{
-            // background-color: pink;
-            height: 40px;
-            margin-left: auto;
-            margin-right: auto;
-            .data{
-                color: $backgroundColor;
-            }
-            .comfy{
-                color: $clr-primary-5;
-            }
-            .right{
-                color: $backgroundColor;
-            }
-        }
-    }
+   
 
 }
 

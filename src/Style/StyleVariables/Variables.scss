@@ -14,21 +14,4 @@ $clr-primary-7: #c5a491;
 $clr-grey-8: #bcccdc;
 $clr-grey-3: #324d67;
 $clr-grey-1: #102a42;
-@mixin section1 {
-    width: 100%;
-    height: 150px;
-    background-color: $clr-primary-10;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    margin-bottom: 5rem;
 
-    h1 {
-        font-size: clamp(1.5rem, 5vw, 2rem);
-        color: $clr-primary-1;
-
-        .home {
-            color: $clr-primary-3;
-        }
-    }
-}

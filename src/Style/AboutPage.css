@@ -1,26 +1,3 @@
-.bodyAbout .section1 {
-  width: 100%;
-  height: 150px;
-  background-color: #eaded7;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 10%;
-  margin-bottom: 5rem;
-}
-
-.bodyAbout .section1 h1 {
-  font-size: clamp(1.5rem, 5vw, 2rem);
-  color: #453227;
-}
-
-.bodyAbout .section1 h1 .home {
-  color: #795744;
-}
-
 .bodyAbout .section2 {
   display: -webkit-box;
   display: -ms-flexbox;

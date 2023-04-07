@@ -7,6 +7,7 @@ import search from "./image/search.svg"
 import { useRef } from 'react';
 import { useReducer } from 'react';
 import ShopingItems from "../Objects/ShopingItems";
+import { Link } from 'react-router-dom';
 let tempProducts;
 const initialState = {
   filtered_products: [],
@@ -191,9 +192,7 @@ function Product() {
   ]
   return (
     <div className='productBody'>
-      <section className='section1'>
-        <h1> <span className='home'> Home </span>/Products</h1>
-      </section>
+   
       <section className='section2'>
 
         <div className='sideBar'>
@@ -264,9 +263,9 @@ function Product() {
                   <div className='image-price'>
                     <div className='item-image' onMouseOver={() => setActiveIndex(index)} onMouseOut={() => setActiveIndex(!index)} >
                       <img className={index === activeIndex ? "hover" : "pic"} src={item.image} alt="" />
-                      <div className={index === activeIndex ? 'searchContainer' : " none"}>
+                      <Link className={index === activeIndex ? 'searchContainer' : " none"} to={item.SKU}>
                         <img className={index === activeIndex ? "img" : " none"} src={search} alt="" />
-                      </div>
+                      </Link>
                     </div>
                     <div className='priceing'>
                       <div>{item.name}</div>
@@ -288,7 +287,7 @@ function Product() {
                       <h1>{item.name}</h1>
                       <h4 className='price'>$ {item.amount}</h4>
                       <p>Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic ...</p>
-                      <div className='detail'>detail</div>
+                      <Link className='detail' to={item.SKU} >detail</Link>
                     </div>
                   </div>
                 )

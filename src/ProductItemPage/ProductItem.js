@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 // import ShopingItems from '../Objects/ShopingItems'
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs'
 import { BsCheck } from 'react-icons/bs'
@@ -6,18 +6,26 @@ import subImage1 from "../Asset/subimages/iXlbK9A6_o.jpeg"
 import subImage2 from "../Asset/subimages/A11k7xmf_o.jpeg"
 import subImage3 from "../Asset/subimages/rPR1K8nP_o.jpeg"
 import subImage4 from "../Asset/subimages/t89LageS_o.jpeg"
-
 import "../Style/ProductItem.css"
-let cartitems = []
-const ProductItem = ({ cartNumber, ShopingItems, setCartNumber, setCartId }) => {
-    // console.log(ShopingItems)
-    // const [numberOfItems, setNumberOfItems] = useState(1);
-    let params = 4
-    let item = ShopingItems[params]
+import { Link, useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../store/CartSlice'
+import { useSelector } from "react-redux";
+
+const ProductItem = ({  ShopingItems }) => {
+    const dispatch = useDispatch();
+    let params = useParams();
+    let detail = ShopingItems.filter((list)=>{
+        return list.SKU === params.productid
+    })
+    let item = detail[0]
     const subImages = [item.image, subImage1, subImage2, subImage3, subImage4]
     const [selectImage, setSelectImage] = useState(item.image)
     const [checkColor, setCheckColor] = useState(item.color[0] || item.color)
-    // console.log(selectImage)
+    console.log(checkColor)
+    const [number, setNumber] = useState(1)
+    const addItem = () => dispatch(addToCart({ item, checkColor, number })) 
+
     if (ShopingItems) {
         return (
             <div className='productItemBody'>
@@ -60,16 +68,21 @@ const ProductItem = ({ cartNumber, ShopingItems, setCartNumber, setCartId }) => 
                                 }) : <button className={item.color}><BsCheck /></button>
                         } </h4>
                         <div className='numberofitem'>
-                            <div className='button' onClick={() => setCartNumber(cartNumber-1)}>-</div>
-                            <div className='input'>{cartNumber}</div>
-                            <div className='button' onClick={() => setCartNumber(cartNumber+1)}>+</div>
+                            <div className='button' onClick={() => setNumber(number - 1)}>-</div>
+                            <div className='input'>{number}</div>
+                            <div className='button' onClick={() => setNumber(number + 1)}>+</div>
                         </div>
-                        <button className='cBtn' onClick={() => setCartId(cartNumber+ 7)}>ADD TO CHART</button>
+                        <Link to={'/cart'} onClick={addItem}>
+                                <button to="/cart" className='cBtn' >
+                                ADD TO CHART
+                                </button>
+                                </Link>
+                        {/* <button className='cBtn' onClick={() => setCartId(item.SKU) || setCartNumber(number)}>ADD TO CHART</button> */}
                     </article>
                 </section>
             </div>
         )
     }
 }
-export const myItemList = cartitems;
+// export const myItemList = addItem;
 export default ProductItem;

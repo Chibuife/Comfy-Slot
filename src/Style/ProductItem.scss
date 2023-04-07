@@ -7,7 +7,7 @@
     margin-right: auto;
 
     button {
-        margin-top: 3rem;
+        // margin-top: 3rem;
         cursor: pointer;
         border: none;
         padding: 10px;
@@ -129,7 +129,7 @@
                     background-color: green;
                 }
 
-                .blue {
+                .black {
                     background-color: black;
                 }
 
@@ -137,6 +137,7 @@
                     background-color: yellow;
                 }
             }
+            
 
             .numberofitem {
                 display: flex;

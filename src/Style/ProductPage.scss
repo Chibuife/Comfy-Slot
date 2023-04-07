@@ -1,15 +1,11 @@
 @import "./StyleVariables/Variables.scss";
 
-.section1 {
-    @include section1
-}
-
 .productBody {
     .section2 {
         display: grid;
         grid-template-columns: 1fr 4fr;
         width: 100%;
-        height: 100vh;
+        // height: 80%;
 
         // background-color: aqua;
         ul {
@@ -46,27 +42,6 @@
                 width: 30%;
                 background-color: $clr-grey-8;
             }
-
-            img {
-                // color: white;
-                // fill: white;
-                // stroke: white;
-                // background-color: white;
-                // fill: white;
-                // background-color: white;
-                // color: white !important; 
-
-                // filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
-
-                // .svg{
-                //     color: white;
-                //     fill: white;
-                // }
-                // svg[Attributes Style] {
-
-                // }
-
-            }
         }
 
         .container {
@@ -74,18 +49,16 @@
             margin-left: auto;
             margin-right: auto;
             height: 100vh;
-            // background-color: red;
             padding-top: 3rem;
         }
 
         .imagContainer {
-            height: 100%;
+            height: 90%;
             -ms-overflow-style: none;
             scrollbar-width: none;
 
 
             width: 100%;
-            // background-color: orange;
             overflow-y: scroll;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -190,7 +163,7 @@
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 100%;
+    height: 90%;
     width: 100%;
 
     // background-color: orange;
@@ -252,10 +225,10 @@
     border-radius: 5px;
 }
 
-.section2 .sideBar select option.red {
-    background-color: red;
+// .section2 .sideBar select option.red {
+//     background-color: red;
 
-}
+// }
 
 
 // cartegory button design
@@ -369,10 +342,6 @@ h4 {
 
 @media (max-width: 990px) {
     .productBody .section2 {
-        .classify {
-            // margin-left: auto;
-            // margin-right: auto;
-        }
     }
 
     .color {
@@ -380,7 +349,7 @@ h4 {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 990px) {
     .productBody .section2 {
         grid-template-columns: 1fr;
 

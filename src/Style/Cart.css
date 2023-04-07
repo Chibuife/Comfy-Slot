@@ -1,8 +1,9 @@
 .cartBody {
+  font-size: 1rem;
+  color: #102a42;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  height: 100vh;
   position: relative;
 }
 
@@ -22,6 +23,10 @@
           align-items: center;
 }
 
+.cartBody .sectionOne h4 {
+  font-size: clamp(0.5rem, 5vw, 1rem);
+}
+
 .cartBody .sectionOne .delete {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,26 +34,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: blue;
-  font-size: 20px;
+  background-color: #bb2525;
+  font-size: 50px;
   color: white;
-  width: 20px;
+  width: 25px;
   height: 25px;
   border: none;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 3px;
+  padding: 3px;
 }
 
 .cartBody .sectionOne table {
   width: 100%;
   text-align: center;
   padding-top: 5rem;
-  border-bottom: 1px solid #080708;
+  border-bottom: 1px solid #617d98;
   border-collapse: collapse;
-}
-
-.cartBody .sectionOne table th {
-  border-bottom: 1px solid #080708;
 }
 
 .cartBody .sectionOne table td {
@@ -57,11 +59,21 @@
 
 .cartBody .sectionOne table th {
   padding: 3rem 0;
-  font-weight: lighter;
+  border-bottom: 1px solid #617d98;
+  color: #617d98;
+  font-size: 1.5rem;
+}
+
+.cartBody .sectionOne table th h5 {
+  font-weight: 400;
+}
+
+.cartBody .list .number {
+  margin: 0px 20px;
 }
 
 .cartBody .list .numbeOfItems {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -71,6 +83,22 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.cartBody .list .price {
+  color: #ab7a5f;
+}
+
+.cartBody .list .totalValue {
+  color: #617d98;
+}
+
+.cartBody .list .colorLabel {
+  color: #617d98;
+}
+
+.cartBody .list .smallscr {
+  display: none;
 }
 
 .cartBody .list-description {
@@ -130,22 +158,50 @@
   padding: 8px;
   border: none;
   border-radius: 3px;
+  letter-spacing: 0.3rem;
+}
+
+.cartBody .continue {
+  background-color: #ab7a5f;
+  color: white;
+}
+
+.cartBody .login {
+  background-color: #ab7a5f;
+  color: white;
+  padding: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 0.5rem;
+  margin-top: 10px;
+}
+
+.cartBody .clear {
+  background-color: #222;
+  color: white;
 }
 
 .cartBody .sectionTwo {
   position: relative;
   width: 100%;
+  height: 230px;
   margin-top: 3rem;
 }
 
-.cartBody .sectionTwo table {
-  width: 350px;
-  text-align: left;
-  border-radius: 5px;
-  border: 1px solid black;
-  padding: 30px;
+.cartBody .sectionTwo > div {
+  width: 450px;
   position: absolute;
   right: 0;
+}
+
+.cartBody .sectionTwo table {
+  text-align: left;
+  border-radius: 5px;
+  border: 1px solid #617d98;
+  padding: 30px;
+  width: 100%;
 }
 
 .cartBody .sectionTwo table td {
@@ -156,18 +212,6 @@
   padding: 5px;
 }
 
-.cartBody .sectionTwo table .shipping td {
-  border-bottom: 1px solid black;
-}
-
-.cartBody .sectionTwo table button {
-  width: 100%;
-  cursor: pointer;
-  padding: 5px;
-  border: none;
-  border-radius: 5px;
-}
-
 .cartBody .sectionTwo table .total {
   font-size: 1.5rem;
   font-weight: 700;
@@ -175,6 +219,14 @@
 
 .cartBody .sectionTwo table .total td {
   padding: 10px;
+}
+
+.cartBody .underline {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: #617d98;
+  height: 1px;
+  width: 150%;
 }
 
 .cartBody .red {
@@ -225,5 +277,35 @@
   height: 20px;
   border-radius: 100%;
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .cartBody .list .totalValue {
+    display: none;
+  }
+  .cartBody .list .colorLabel {
+    color: #617d98;
+  }
+  .cartBody .list .smallscr {
+    display: block;
+    font-size: clamp(0.5rem, 4vw, 1rem);
+    font-weight: 700;
+  }
+  .cartBody .list .largescr {
+    display: none;
+  }
+  .cartBody .heading {
+    display: none;
+  }
+  .cartBody .list .numbeOfItems {
+    width: 50%;
+  }
+  .cartBody .list .number {
+    margin: 0 2px;
+  }
+  .cartBody .sectionTwo > div {
+    left: 0;
+    width: auto;
+  }
 }
 /*# sourceMappingURL=Cart.css.map */

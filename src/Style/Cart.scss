@@ -1,210 +1,317 @@
-.cartBody {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    // background-color: red;
-    height: 100vh;
-    position: relative;
+ @import "./StyleVariables/Variables.scss";
 
-    .menu-list {
-        padding: 20px;
-        border-bottom: 1px solid black;
-        padding-left: 250px;
-        padding-right: 250px;
-    }
+ .cartBody {
+     font-size: 1rem;
+     color: $clr-grey-1;
+     width: 90%;
+     margin-left: auto;
+     margin-right: auto;
+     // background-color: red;
+     // height: 100vh;
+     position: relative;
 
-    .sectionOne {
-        display: flex;
-        align-items: center;
+     .menu-list {
+         padding: 20px;
+         border-bottom: 1px solid black;
+         padding-left: 250px;
+         padding-right: 250px;
+     }
 
-        .delete {
-            display: flex;
-            align-items: center;
-            background-color: blue;
-            font-size: 20px;
-            color: white;
-            width: 20px;
-            height: 25px;
-            border: none;
-            cursor: pointer;
-            border-radius: 2px;
+     .sectionOne {
+         display: flex;
+         align-items: center;
+
+         h4 {
+             font-size: clamp(0.5rem, 5vw, 1rem);
+         }
+
+         .delete {
+             display: flex;
+             align-items: center;
+             background-color: $clr-red-dark;
+             font-size: 50px;
+             color: white;
+             width: 25px;
+             height: 25px;
+             border: none;
+             cursor: pointer;
+             border-radius: 3px;
+             padding: 3px;
+         }
+
+     }
+
+     .sectionOne table {
+         width: 100%;
+         text-align: center;
+         padding-top: 5rem;
+         border-bottom: 1px solid $clr-grey-5;
+         border-collapse: collapse;
+
+
+         td {
+             padding: 3rem 0;
+         }
+
+         th {
+             padding: 3rem 0;
+             border-bottom: 1px solid $clr-grey-5;
+             color: $clr-grey-5;
+             font-size: 1.5rem;
+
+             h5 {
+                 font-weight: 400;
+             }
+         }
+
+
+     }
+
+     .list {
+         .number {
+             margin: 0px 20px;
+         }
+
+         .numbeOfItems {
+
+             font-size: 1.5rem;
+             font-weight: 500;
+
+             .count {
+                 cursor: pointer;
+                 user-select: none;
+             }
+         }
+
+         .price {
+             color: $clr-primary-5;
+         }
+
+         .totalValue {
+             color: $clr-grey-5;
+         }
+
+         .colorLabel {
+             color: $clr-grey-5;
+         }
+
+         .smallscr {
+             display: none;
+         }
+     }
+
+     .list-description {
+         display: flex;
+         align-items: center;
+         text-align: left;
+
+         span {
+
+             display: flex;
+             align-items: center;
+         }
+
+         button {
+             margin-top: 3px;
+             margin-left: 5px;
+             width: 13px;
+             height: 13px;
+             border: none;
+             border-radius: 5px;
+         }
+
+         h4 {
+             margin: 0;
+         }
+
+         >img {
+             width: 100px;
+             height: 70px;
+             border-radius: 3px;
+             object-fit: cover;
+             margin-right: 10px;
+         }
+     }
+
+     .buttons {
+         display: flex;
+         width: 100%;
+         justify-content: space-between;
+         margin-top: 3rem;
+
+         button {
+             cursor: pointer;
+             padding: 8px;
+             border: none;
+             border-radius: 3px;
+             letter-spacing: 0.3rem;
+         }
+     }
+
+     .continue {
+         background-color: $clr-primary-5;
+         color: white;
+     }
+
+     .login {
+         background-color: $clr-primary-5;
+         color: white;
+         padding: 10px 0;
+         width: 100%;
+         cursor: pointer;
+         border: none;
+         border-radius: 5px;
+         letter-spacing: 0.5rem;
+         margin-top: 10px;
         }
-    }
 
-    .sectionOne table {
-        width: 100%;
-        text-align: center;
-        padding-top: 5rem;
-        border-bottom: 1px solid rgb(8, 7, 8);
-        border-collapse: collapse;
+     .clear {
+         background-color: $clr-black;
+         color: white;
+     }
 
-        th {
-            border-bottom: 1px solid rgb(8, 7, 8);
-        }
+     .sectionTwo {
+         position: relative;
+         width: 100%;
+         height: 230px;
+         margin-top: 3rem;
 
-        td {
-            padding: 3rem 0;
-        }
+         >div {
+             width: 450px;
+             position: absolute;
+             right: 0;
+         }
 
-        th {
-            padding: 3rem 0;
-            font-weight: lighter;
-        }
-    }
+         table {
+             text-align: left;
+             border-radius: 5px;
+             border: 1px solid $clr-grey-5;
+             padding: 30px;
+             width: 100%;
 
-    .list {
-        .numbeOfItems {
+             td {
+                 padding: 5px;
+             }
 
-            font-size: 2rem;
-            font-weight: 500;
+             th {
+                 padding: 5px;
+             }
 
-            .count {
-                cursor: pointer;
-                user-select: none;
-            }
-        }
-    }
+             //  button {
 
-    .list-description {
-        display: flex;
-        align-items: center;
-        text-align: left;
+             //  }
 
-        span {
+             .total {
+                 font-size: 1.5rem;
+                 font-weight: 700;
 
-            display: flex;
-            align-items: center;
-        }
+                 td {
+                     padding: 10px;
+                 }
+             }
+         }
+     }
 
-        button {
-            margin-top: 3px;
-            margin-left: 5px;
-            width: 13px;
-            height: 13px;
-            border: none;
-            border-radius: 5px;
-        }
+     .underline {
+        margin-top: 1rem;
+         margin-bottom: 2rem;
+         background-color: $clr-grey-5;
+         height: 1px;
+         width: 150%;
+     }
 
-        h4 {
-            margin: 0;
-        }
+     .red {
+         color: transparent;
+         background-color: red;
+         border: none;
+         width: 20px;
+         height: 20px;
+         border-radius: 100%;
+         cursor: pointer;
+     }
 
-        >img {
-            width: 100px;
-            height: 70px;
-            border-radius: 3px;
-            object-fit: cover;
-            margin-right: 10px;
-        }
-    }
+     .black {
+         color: transparent;
+         background-color: black;
+         border: none;
+         width: 20px;
+         height: 20px;
+         border-radius: 100%;
+         cursor: pointer;
+     }
 
-    .buttons {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        margin-top: 3rem;
+     .green {
+         color: transparent;
+         background-color: green;
+         border: none;
+         width: 20px;
+         height: 20px;
+         border-radius: 100%;
+         cursor: pointer;
+     }
 
-        button {
-            cursor: pointer;
-            padding: 8px;
-            border: none;
-            border-radius: 3px;
-        }
-    }
+     .blue {
+         color: transparent;
+         background-color: blue;
+         border: none;
+         width: 20px;
+         height: 20px;
+         border-radius: 100%;
+         cursor: pointer;
+     }
 
-    .sectionTwo {
-        position: relative;
-        width: 100%;
-        margin-top: 3rem;
-        table {
-            width: 350px;
-            text-align: left;
-            border-radius: 5px;
-            border: 1px solid black;
-            padding: 30px;
-            position: absolute;
-            right: 0;
-            td {
-                padding: 5px;
-            }
+     .yellow {
+         color: transparent;
+         background-color: yellow;
+         border: none;
+         width: 20px;
+         height: 20px;
+         border-radius: 100%;
+         cursor: pointer;
+     }
+ }
 
-            th {
-                padding: 5px;
-            }
+ @media (max-width: 700px) {
+     .cartBody {
 
-            .shipping {
+         .list {
 
-                td {
-                    border-bottom: 1px solid black;
-                }
-            }
 
-            button {
-                width: 100%;
-                cursor: pointer;
-                padding: 5px;
-                border: none;
-                border-radius: 5px;
-            }
+             .totalValue {
+                 display: none;
+             }
 
-            .total {
-                font-size: 1.5rem;
-                font-weight: 700;
+             .colorLabel {
+                 color: $clr-grey-5;
+             }
 
-                td {
-                    padding: 10px;
-                }
-            }
-        }
-    }
-          .red {
-              color: transparent;
-              background-color: red;
-              border: none;
-              width: 20px;
-              height: 20px;
-              border-radius: 100%;
-              cursor: pointer;
-          }
-    
-          .black {
-              color: transparent;
-              background-color: black;
-              border: none;
-              width: 20px;
-              height: 20px;
-              border-radius: 100%;
-              cursor: pointer;
-          }
-    
-          .green {
-              color: transparent;
-              background-color: green;
-              border: none;
-              width: 20px;
-              height: 20px;
-              border-radius: 100%;
-              cursor: pointer;
-          }
-    
-          .blue {
-              color: transparent;
-              background-color: blue;
-              border: none;
-              width: 20px;
-              height: 20px;
-              border-radius: 100%;
-              cursor: pointer;
-          }
-    
-          .yellow {
-              color: transparent;
-              background-color: yellow;
-              border: none;
-              width: 20px;
-              height: 20px;
-              border-radius: 100%;
-              cursor: pointer;
-          }
-                
-}
+             .smallscr {
+                 display: block;
+                 font-size: clamp(0.5rem, 4vw, 1rem);
+                 font-weight: 700;
+             }
+
+             .largescr {
+                 display: none;
+             }
+         }
+
+         .heading {
+             display: none;
+         }
+
+         .list {
+             .numbeOfItems {
+                 width: 50%;
+             }
+
+             .number {
+                 margin: 0 2px;
+             }
+         }
+                 .sectionTwo>div{
+                    left: 0;
+                    width: auto;
+                 }
+     }
+ }

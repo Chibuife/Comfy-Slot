@@ -1,0 +1,295 @@
+.authBody {
+  background: radial-gradient(#40404b, #111118) rgba(34, 34, 40, 0.94);
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* forgotten password */
+}
+
+.authBody .googleButton {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  height: 40px;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #bcccdc;
+  border-radius: 2px;
+  color: #102a42;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 30;
+}
+
+.authBody .googleButton span {
+  margin-left: 20px;
+}
+
+.authBody .googleButton img {
+  border-radius: 100%;
+}
+
+.authBody .googleButton:hover {
+  background-color: #f1f5f8;
+}
+
+.authBody a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.authBody h3 {
+  color: #102a42;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.authBody .signin-login {
+  background-color: white;
+  width: 330px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+}
+
+.authBody .gray {
+  background-color: #ededed;
+  padding-bottom: 10px;
+}
+
+.authBody .link-signUp-login {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.authBody .navigate-to {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.authBody .link-signup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  z-index: 30;
+}
+
+.authBody .not-active {
+  border-bottom: 1px solid rgba(51, 50, 50, 0.159);
+  color: rgba(51, 50, 50, 0.459);
+}
+
+.authBody .active {
+  border-bottom: 1px solid #5c666f;
+  color: #5c666f;
+}
+
+.authBody .link-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  z-index: 30;
+}
+
+.authBody .inputbox {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 20;
+  position: relative;
+}
+
+.authBody .inputbox img {
+  height: 50%;
+}
+
+.authBody .inputbox input {
+  outline: none;
+  height: 40px;
+  width: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.authBody .input-icon {
+  width: 60px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.authBody .or {
+  padding: 20px;
+}
+
+.authBody .small {
+  width: 100%;
+  background-color: #ededed;
+  padding: 15px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.authBody button {
+  cursor: pointer;
+  margin-left: auto;
+  height: 90px;
+  color: white;
+  border: none;
+  margin-right: auto;
+  background-color: #ea5323;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: -22px;
+  font-size: 18px;
+  letter-spacing: 0.3rem;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  position: relative;
+  z-index: 30;
+}
+
+.authBody button:hover {
+  font-size: 20px;
+}
+
+.authBody button :nth-child(1) {
+  margin-left: 10px;
+}
+
+.authBody button img {
+  width: 10px;
+}
+
+.authBody .passwordReset {
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.authBody .backimg {
+  height: 13px;
+  width: 13px;
+}
+
+.authBody .back {
+  height: 20px;
+  width: 20px;
+  top: 10px;
+  left: 20px;
+  position: absolute;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.authBody .passwordResettext {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.54);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.authBody .sendEmailBtn {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.authBody .authImg {
+  margin-top: 20px;
+  height: 70px;
+}
+
+.authBody .forgottenPasswordBox {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.authBody .passwordClose {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.authBody .p {
+  z-index: 50;
+  position: relative;
+  background-color: #111118;
+  color: white;
+  width: 80%;
+  position: absolute;
+  height: 30%;
+  top: 32%;
+  left: 10%;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 18% 90%, 10% 99%, 5% 90%, 0 90%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 18% 90%, 10% 99%, 5% 90%, 0 90%);
+  border-radius: 5px;
+}
+/*# sourceMappingURL=Login.css.map */

@@ -18,7 +18,7 @@ const PaymentSlot = () => {
             <div>
             <table>
                 <tr>
-                    <th>Subtotal:</th> <th>${total}</th>
+                    <th>Subtotal:</th> <th>${total.toFixed(2)}</th>
                 </tr>
                 <tr className="shipping"><td>Shipping Fee</td> <td>$5.34</td>
                 </tr>

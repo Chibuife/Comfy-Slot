@@ -1,13 +1,43 @@
  @import "./StyleVariables/Variables.scss";
 
+ .empty {
+     margin: 0 auto;
+     text-align: center;
+     color: $clr-grey-1;
+     font-size: 1.3rem;
+
+     .link {
+         text-decoration: none;
+     }
+
+     button {
+         display: flex;
+         justify-content: space-between;
+         margin-top: 1rem;
+         cursor: pointer;
+         padding: 15px;
+         border: none;
+         border-radius: 3px;
+         letter-spacing: 0.3rem;
+         margin-left: auto;
+         margin-right: auto;
+         color: white;
+         background-color: $clr-primary-5;
+         transition: all 0.3s linear;
+     }
+
+     button:hover {
+         background-color: $clr-primary-7;
+         color: $clr-grey-1 ;
+     }
+ }
+
  .cartBody {
      font-size: 1rem;
      color: $clr-grey-1;
      width: 90%;
      margin-left: auto;
      margin-right: auto;
-     // background-color: red;
-     // height: 100vh;
      position: relative;
 
      .menu-list {
@@ -38,7 +68,6 @@
              border-radius: 3px;
              padding: 3px;
          }
-
      }
 
      .sectionOne table {
@@ -163,7 +192,7 @@
          border-radius: 5px;
          letter-spacing: 0.5rem;
          margin-top: 10px;
-        }
+     }
 
      .clear {
          background-color: $clr-black;
@@ -173,7 +202,7 @@
      .sectionTwo {
          position: relative;
          width: 100%;
-         height: 230px;
+         height: 300px;
          margin-top: 3rem;
 
          >div {
@@ -213,7 +242,7 @@
      }
 
      .underline {
-        margin-top: 1rem;
+         margin-top: 1rem;
          margin-bottom: 2rem;
          background-color: $clr-grey-5;
          height: 1px;
@@ -309,9 +338,10 @@
                  margin: 0 2px;
              }
          }
-                 .sectionTwo>div{
-                    left: 0;
-                    width: auto;
-                 }
+
+         .sectionTwo>div {
+             left: 0;
+             width: auto;
+         }
      }
  }

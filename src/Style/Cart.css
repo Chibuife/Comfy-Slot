@@ -1,3 +1,40 @@
+.empty {
+  margin: 0 auto;
+  text-align: center;
+  color: #102a42;
+  font-size: 1.3rem;
+}
+
+.empty .link {
+  text-decoration: none;
+}
+
+.empty button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: 3px;
+  letter-spacing: 0.3rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: #ab7a5f;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.empty button:hover {
+  background-color: #c5a491;
+  color: #102a42;
+}
+
 .cartBody {
   font-size: 1rem;
   color: #102a42;
@@ -186,7 +223,7 @@
 .cartBody .sectionTwo {
   position: relative;
   width: 100%;
-  height: 230px;
+  height: 300px;
   margin-top: 3rem;
 }
 

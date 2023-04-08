@@ -5,9 +5,12 @@ import { FaShoppingCart } from 'react-icons/fa'
 import { FaUserPlus } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import '../Style/PagesLayout.css'
+import { useSelector } from 'react-redux';
 const PagesLayout = () => {
     const location = useLocation();
     const path = location.pathname;
+    const itemsList = useSelector(state => state.itemsList)
+console.log(itemsList)
     return (
         <div className='layout'>
             <nav>
@@ -32,9 +35,9 @@ const PagesLayout = () => {
                 </div>
                 <div className='hamBurgerMenu none'><GiHamburgerMenu /></div>
             </nav>
-            <div className={path !== '/' ? 'navigation' : ''}>
+            <div className={path !== '/' || itemsList.lenght < 0  ? 'navigation' : ''}>
                 {
-                    path !== '/' ?
+                    path !== '/'|| itemsList === [{ totalPrice: 0 }] ?
                         <h1> <Link className='home' to="/"> Home </Link><Link to={path} className="path">{path}</Link></h1>
                         : <></>
                 }

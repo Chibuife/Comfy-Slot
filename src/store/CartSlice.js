@@ -42,26 +42,37 @@ const counterSlice = createSlice({
 
         },
         adding(state, action) {
-            const id = action.payload;
-            console.log(id)
-            const existingItem = state.itemsList.find((item) => item.id === id.id);
+            const it = action.payload;
+            const existingItem = state.itemsList.find((item) => item.id === it.id && it.color === item.color);
             console.log(existingItem)
 
             existingItem.quantity++
             existingItem.totalPrice += existingItem.price
         },
         subtracting(state, action) {
-            const id = action.payload;
-            console.log(id)
-            const existingItem = state.itemsList.find((item) => item.id === id.id);
+            const it = action.payload;
+            const existingItem = state.itemsList.find((item) => item.id === it.id && it.color === item.color);
             console.log(existingItem)
 
             existingItem.quantity--
             existingItem.totalPrice -= existingItem.price
+        },
+        removeItem(state, action){
+            const it = action.payload;
+            state.itemsList = state.itemsList.filter((item) =>
+             it.color !== item.color  
+            ||
+               item.id !== it.id    
+            );
+                state.totalQuantity -= 1
+                console.log(state.itemsList)
+        },
+        clearCart(state){
+            state.itemsList =[]
         }
     }
 })
 
-export const { addToCart, adding, subtracting } = counterSlice.actions;
+export const { addToCart, adding, subtracting, removeItem, clearCart } = counterSlice.actions;
 
 export default counterSlice;

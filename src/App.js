@@ -8,10 +8,14 @@ import ProductItem from "./ProductItemPage/ProductItem";
 import Product from "./ProductPage/ProductPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PagesLayout from "./PagesLayout/PagesLayout";
+import Login from "./Login";
+import { Authentication } from "./Email";
+import Signup from "./Signup";
+import { PasswordReset } from "./ForgottenPassword";
 let numberOfItem = 0;
 function App() {
-
- 
+  const [passwordClose, setPasswordClose] = useState(false)
+  
   const router = createBrowserRouter([
     {
       path: "/",
@@ -38,6 +42,24 @@ function App() {
           element: <Cart  />,
         }
       ]
+    },
+    {
+      path: "/auth",
+      element: <Authentication passwordClose={passwordClose} setPasswordClose={setPasswordClose} />,
+      children: [
+        {
+          path: "/auth/login",
+          element: <Login />,
+        },
+        {
+          path: "/auth/signup",
+          element: <Signup passwordClose={passwordClose} setPasswordClose={setPasswordClose} />,
+        },
+        {
+          path: "/auth/passwordreset",
+          element: <PasswordReset />,
+        },
+      ],
     },
   ])
 

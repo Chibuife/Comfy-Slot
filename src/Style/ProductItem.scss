@@ -20,7 +20,10 @@
 
     .cBtn:hover {
         background-color: $clr-primary-7;
-        color: $clr-grey-1;
+        color: $clr-grey-1
+    }
+    .cBtn{
+        margin-top: 1rem;
     }
 
 

@@ -10,7 +10,9 @@ const PagesLayout = () => {
     const location = useLocation();
     const path = location.pathname;
     const itemsList = useSelector(state => state.itemsList)
-console.log(itemsList)
+    const totalQuantity = useSelector(state => state.totalQuantity)
+
+    console.log(itemsList.length)
     return (
         <div className='layout'>
             <nav>
@@ -25,7 +27,7 @@ console.log(itemsList)
                         Cart
                         <div className='cart'>
                             <FaShoppingCart />
-                            <div className='numberOfItems'>0</div>
+                            <div className='numberOfItems'>{0 + totalQuantity}</div>
                         </div>
                     </div>
                     <div className='login'>
@@ -33,13 +35,14 @@ console.log(itemsList)
                         <FaUserPlus />
                     </div>
                 </div>
-                <div className='hamBurgerMenu none'><GiHamburgerMenu /></div>
+                <div className='hamBurgerMenu'><GiHamburgerMenu /></div>
             </nav>
-            <div className={path !== '/' || itemsList.lenght < 0  ? 'navigation' : ''}>
+            <div className={path === '/' || itemsList.length === 0 && path === '/cart'  ? '' : 'navigation'}>
                 {
-                    path !== '/'|| itemsList === [{ totalPrice: 0 }] ?
-                        <h1> <Link className='home' to="/"> Home </Link><Link to={path} className="path">{path}</Link></h1>
-                        : <></>
+                    path === '/' || itemsList.length === 0 && path === '/cart' ?
+                    <></>
+                        : <h1> <Link className='home' to="/"> Home </Link><Link to={path} className="path">{path}</Link></h1>
+
                 }
                 {/* {pagesnav} */}
             </div>

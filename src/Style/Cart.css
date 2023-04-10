@@ -1,5 +1,5 @@
 .empty {
-  margin: 0 auto;
+  margin: 10rem auto;
   text-align: center;
   color: #102a42;
   font-size: 1.3rem;
@@ -110,8 +110,12 @@
 }
 
 .cartBody .list .numbeOfItems {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .cartBody .list .numbeOfItems .count {

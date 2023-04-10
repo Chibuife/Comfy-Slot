@@ -8,6 +8,10 @@ import { useRef } from 'react';
 import { useReducer } from 'react';
 import ShopingItems from "../Objects/ShopingItems";
 import { Link } from 'react-router-dom';
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { BsFillGridFill } from 'react-icons/bs'
+import { BsCheck } from 'react-icons/bs'
+
 let tempProducts;
 const initialState = {
   filtered_products: [],
@@ -30,7 +34,6 @@ const reducer = (state, action) => {
     case "LOAD_PRODUCTS":
       let maxPrice = action.payload.map((p) => p.amount)
       maxPrice = Math.max(...maxPrice)
-      console.log(maxPrice)
       return {
         ...state,
         all_products: [...action.payload],
@@ -62,7 +65,6 @@ const reducer = (state, action) => {
           return b.amount - a.amount
         })
       }
-      console.log(state)
       return { ...state, filtered_products: tempProducts }
     case 'FILTER':
       const { name, value } = action.payload;
@@ -70,7 +72,6 @@ const reducer = (state, action) => {
     case "FILTER_PRODUCTS":
       const { all_products } = state
       const { text, category, company, color, price, shipping } = state.filters
-      console.log(state)
       tempProducts = [...all_products]
       if (text !== '') {
         tempProducts = tempProducts.filter(
@@ -119,7 +120,7 @@ const reducer = (state, action) => {
           company: 'all',
           category: 'all',
           color: 'all',
-          price: 309999,
+          price: 3099.99,
           shipping: false,
         }
       }
@@ -129,11 +130,13 @@ const reducer = (state, action) => {
 }
 
 function Product() {
-  const price = 309999;
   const [state, dispatch] = useReducer(reducer, initialState)
   const [activeIndex, setActiveIndex] = useState(false)
-  const [activeVeiw, setActiveView] = useState(false)
-  const filter = (e) => {
+  const [activeVeiw, setActiveView] = useState(true)
+  const [clear, setClear] = useState()
+  
+console.log(state)
+  const filter = (e, i) => {
     const name = e.target.name;
     let value;
     if (name === "text") {
@@ -147,13 +150,14 @@ function Product() {
     }
     if (name === "color") {
       value = e.target.textContent.toLocaleLowerCase()
-      console.log(value)
+      // console.log(value)
     }
     if (name === "price") {
       value = e.target.value
     }
     if (name === 'shipping') {
       value = e.target.checked
+      console.log(e)
     }
     dispatch({ type: "FILTER", payload: { name, value } })
   }
@@ -166,6 +170,7 @@ function Product() {
     }
     dispatch({ type: "SORT", payload: value })
   }
+
   //function to sort product
 
   //function to filter the product
@@ -192,26 +197,28 @@ function Product() {
   ]
   return (
     <div className='productBody'>
-   
+
       <section className='section2'>
 
         <div className='sideBar'>
           <div className='classify'>
-            <input name="text" onChange={filter} type="text" />
+            <input name="text" onChange={filter} type="text" className='search' placeholder='Search' />
             <h4>Catergory</h4>
             <div className='category'>
               {
                 category.map((item, index) => {
                   return (
-                    <button onClick={filter} name="category">{item}</button>
+                    <div>
+                      <button className={state.filters.category === item.toLocaleLowerCase() ? 'activecat' : ""} onClick={filter} name="category">{item}</button></div>
                   )
                 })
               }
             </div>
             <h4>Company</h4>
-            <select id="" name="company" onChange={filter}>
+            <select id="" name="company" onChange={filter} value={state.filters.company} >
 
               {company.map((item, index) => {
+                // console.log(clear)
                 return (
                   <option>{item}</option>
                 )
@@ -222,30 +229,39 @@ function Product() {
               {
                 color.map((item, index) => {
                   return (
-                    <button className={item} onClick={filter} name="color">{item}</button>
+                    <div className="btnWapper" ><button className={state.filters.color === item.toLocaleLowerCase() ? ` ${item} activeColor` : `${item} noneActiveColor`} onClick={filter} name="color">{item}</button>{index !== 0 ? <div className={state.filters.color === item.toLocaleLowerCase() ? "check" : "notChecked"}><BsCheck /> </div> : null} </div>
                   )
                 })
               }
             </div>
             <h4>Price</h4>
-            <div><CurrencyFormat value={parseFloat(state.filters.price)} displayType={'text'} decimalSeparator="." thousandSeparator={","} prefix={'$'} /></div>
-            <input type="range" max={state.filters.max_price} value={state.filters.price} onChange={filter} name='price' />
-            <div> <span>Free Shiping</span> <input name="shipping" onClick={filter} type="checkbox" className='freeShiping' /> </div>
-            <button onClick={() => dispatch({ type: "CLEAR" })} className="clear">Clear Filters</button>
+            <div>
+              <CurrencyFormat value={parseFloat(state.filters.price)} displayType={'text'} decimalSeparator="." thousandSeparator={","} prefix={'$'} />
+            </div>
+            <input
+              type="range"
+              max={3099.99}
+              value={state.filters.price} onChange={filter}
+              name='price'
+            />
+            <div className='freeShipping'> <span>Free Shiping</span> <input name="shipping" onClick={filter} type="checkbox" checked={state.filters.shipping}  className='freeShiping' /> </div>
+            <button onClick={()=> dispatch({ type: "CLEAR" }) || setClear("all")} className="clear">Clear Filters</button>
           </div>
         </div>
 
         <main>
           <div className='sortContainer'>
-            <div>
-              <img src={detail} alt="" onClick={()=>setActiveView(current=>!current)} />
-              <img src={sortImg} alt="" onClick={() => setActiveView(current => !current)} />
+            <div className='arrange'>
+              <div className={activeVeiw ? "clicked" : ""}>  <BsFillGridFill onClick={() => setActiveView(true)} /> </div>
+              <div className={!activeVeiw ? "clicked" : ""}> <GiHamburgerMenu onClick={() => setActiveView(false)} /></div>
             </div>
-            <div>
-              23 Products Found
+            <div className='productfound'>
+              <div>
+                23 Products Found
+              </div>
+              <div className='thinline'></div>
             </div>
-            <div className='thinline'></div>
-            <div>
+            <div className='sort'>
               Sort By
               <select name="sort" id="" onChange={sortP}>
                 {sort.map((item) => {
@@ -275,7 +291,7 @@ function Product() {
                 )
               })}
             </div>
-            <div className={ !activeVeiw ? 'imagContainerTwo' : 'display-none'} >
+            <div className={!activeVeiw ? 'imagContainerTwo' : 'display-none'} >
               {state.filtered_products.map((item) => {
                 return (
                   <div className='image-price'>
@@ -285,7 +301,7 @@ function Product() {
 
                     <div className='priceing'>
                       <h1>{item.name}</h1>
-                      <h4 className='price'>$ {item.amount}</h4>
+                      <h5 className='price'>$ {item.amount}</h5>
                       <p>Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic ...</p>
                       <Link className='detail' to={item.SKU} >detail</Link>
                     </div>

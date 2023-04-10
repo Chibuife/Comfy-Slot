@@ -4,7 +4,7 @@ const counterSlice = createSlice({
     name: 'cart',
     initialState: {
 
-        itemsList: [{ totalPrice:0, }
+        itemsList: [
         ],
         totalQuantity: 0,
         subTotal: 0,
@@ -35,7 +35,8 @@ const counterSlice = createSlice({
                     totalPrice: newItem.amount * number,
                     name: newItem.name,
                     image: newItem.image,
-                    color: color
+                    color: color,
+                    shipingFee: newItem.shipping,
                 })
                 state.totalQuantity++;
             }
@@ -45,17 +46,24 @@ const counterSlice = createSlice({
             const it = action.payload;
             const existingItem = state.itemsList.find((item) => item.id === it.id && it.color === item.color);
             console.log(existingItem)
+            if (existingItem.quantity < 10) {
+                existingItem.quantity++
+                existingItem.totalPrice += existingItem.price
+                state.totalQuantity++;
 
-            existingItem.quantity++
-            existingItem.totalPrice += existingItem.price
+            }
+      
         },
         subtracting(state, action) {
             const it = action.payload;
             const existingItem = state.itemsList.find((item) => item.id === it.id && it.color === item.color);
             console.log(existingItem)
-
-            existingItem.quantity--
-            existingItem.totalPrice -= existingItem.price
+            if (existingItem.quantity > 1){
+                existingItem.quantity--
+                existingItem.totalPrice -= existingItem.price
+                state.totalQuantity--;
+            }
+        
         },
         removeItem(state, action){
             const it = action.payload;
@@ -69,6 +77,7 @@ const counterSlice = createSlice({
         },
         clearCart(state){
             state.itemsList =[]
+            state.totalQuantity = 0
         }
     }
 })

@@ -1,6 +1,10 @@
 @import "./StyleVariables/Variables.scss";
 
 .productBody {
+    h1 {
+        color: $clr-grey-1;
+    }
+
     .section2 {
         display: grid;
         grid-template-columns: 1fr 4fr;
@@ -20,6 +24,15 @@
         .classify {
             margin-left: 30%;
             position: relative;
+            // background-color: red;
+
+            .search {
+                border: none;
+                outline: none;
+                background-color: $clr-grey-10;
+                padding: 0.5rem;
+                border-radius: 3px;
+            }
         }
 
         main {
@@ -32,15 +45,66 @@
         .sortContainer {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             align-items: center;
             width: 90%;
             margin-left: auto;
             margin-right: auto;
+            // background-color: red;
+
+            .arrange {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // background-color: blue;
+                width: 80px;
+
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    // font-size: 20px;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    padding: 4px 4px;
+                    cursor: pointer;
+                    color: black;
+                    background-color: white;
+                }
+
+                .clicked {
+                    color: white;
+                    background-color: black;
+                }
+            }
+
+            .productfound {
+                // background-color: blue;
+                width: 700px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                color: $clr-grey-3;
+                font-size: 0.9rem;
+            }
 
             .thinline {
                 height: 1px;
-                width: 30%;
+                width: 80%;
                 background-color: $clr-grey-8;
+            }
+
+            select {
+                border: none;
+                outline: none;
+                font-size: 1.1rem;
+                cursor: pointer;
+                margin-left: 5px;
+            }
+
+            .sort {
+                font-size: 1.1rem;
             }
         }
 
@@ -181,6 +245,8 @@
 
         p {
             line-height: 1rem;
+            color: $clr-grey-3;
+            // font-size: 1rem;
         }
 
         .detail {
@@ -234,46 +300,88 @@
 // cartegory button design
 
 .category {
-    display: flex;
-    flex-direction: column;
+
+    // display: flex;
+    // flex-direction: column;
+    .categoryChild {
+        background-color: blue;
+        width: inherit;
+        color: red;
+        cursor: pointer;
+    }
 
     button {
+        cursor: pointer;
         background-color: transparent;
         border: none;
         text-align: start;
-        width: 80px;
-        padding-bottom: 7px;
         margin-bottom: 7px;
-        margin-top: 10px;
         cursor: pointer;
         transition: all 0.5s ease;
+        color: $clr-grey-5;
     }
 
-    button:hover {
-        box-shadow: 0px 1px 0px black;
+    .activecat {
+        box-shadow: 0px 1px 0px $clr-grey-5;
     }
 }
 
+.classify select {
+    border: none;
+    background-color: $clr-grey-10;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2px;
+}
+
 // color button design
+
+.activeColor {
+    opacity: 1;
+    border-bottom: 1px solid $clr-grey-5;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.noneActiveColor {
+    opacity: 0.5;
+    border: none;
+}
+
 .color {
     display: flex;
     justify-content: space-between;
     width: 80%;
+    position: relative;
+    user-select: none;
 
-   
+    .check {
+        position: absolute;
+        top: 15%;
+        left: 8%;
+        color: white;
+
+    }
+
+    .notChecked {
+        display: none;
+    }
+
+    .btnWapper {
+        position: relative;
+        cursor: pointer;
+    }
 
     .All {
         background-color: transparent;
-        border: none;
         width: 20px;
         height: 20px;
         cursor: pointer;
         transition: all 0.5s ease;
+        color: $clr-grey-5;
     }
 
-    .All:hover {
-        box-shadow: 0px 1px 0px black;
-    }
+    .All:hover {}
 
     .red {
         color: transparent;
@@ -328,6 +436,13 @@
 
 .clear {
     cursor: pointer;
+    margin: 1rem 0;
+    letter-spacing: 0.2rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: $clr-red-dark;
+    color: white;
 }
 
 .freeShiping {
@@ -338,14 +453,25 @@
 h4 {
     margin-top: 20px;
     margin-bottom: 10px;
+    color: $clr-grey-1;
+}
+h5{
+    font-size: 1.01rem;
+    color: $clr-primary-6;
+}
+
+.freeShipping {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
 }
 
 @media (max-width: 990px) {
-    .productBody .section2 {
-    }
+    .productBody .section2 {}
 
     .color {
-        width: 35%;
+        width: 50%;
     }
 }
 
@@ -357,5 +483,15 @@ h4 {
             width: 70%;
             margin-left: 5%;
         }
+    }
+
+    .productBody .section2 .sortContainer .thinline {
+        width: 100%;
+    }
+
+    .productBody .section2 .sortContainer .productfound {
+        width: 100%;
+        height: 30px;
+        margin: 10px 0;
     }
 }

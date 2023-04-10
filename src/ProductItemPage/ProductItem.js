@@ -68,9 +68,9 @@ const ProductItem = ({  ShopingItems }) => {
                                 }) : <button className={item.color}><BsCheck /></button>
                         } </h4>
                         <div className='numberofitem'>
-                            <div className='button' onClick={() => setNumber(number - 1)}>-</div>
+                            <div className='button' onClick={() => number > 1 ? setNumber(number - 1) : null}>-</div>
                             <div className='input'>{number}</div>
-                            <div className='button' onClick={() => setNumber(number + 1)}>+</div>
+                            <div className='button' onClick={() => number < 10 ? setNumber(number + 1): null}>+</div>
                         </div>
                         <Link to={'/cart'} onClick={addItem}>
                                 <button to="/cart" className='cBtn' >

@@ -5,13 +5,13 @@ const PaymentSlot = () => {
     let total = 0;
 
     const itemsList = useSelector(state => state.itemsList)
-   
+    console.log(itemsList)
+
     itemsList.forEach((item) => {
-        console.log(item)
         total += item.totalPrice
         })
     console.log(total)
-
+    const shipping = 5.34
   
     return (
         <section className="sectionTwo">
@@ -20,11 +20,11 @@ const PaymentSlot = () => {
                 <tr>
                     <th>Subtotal:</th> <th>${total.toFixed(2)}</th>
                 </tr>
-                <tr className="shipping"><td>Shipping Fee</td> <td>$5.34</td>
+                    <tr className="shipping"><td>Shipping Fee</td> <td>${shipping}</td>
                 </tr>
                 <div className="underline"></div>
                 <tr className="total">
-                    <td>Order Total</td> <td>$36.33</td>
+                        <td>Order Total</td> <td>${(shipping + total).toFixed(2) }</td>
                 </tr>
             </table>
             <button className="login" >LOGIN</button>

@@ -22,6 +22,10 @@
   color: #102a42;
 }
 
+.productItemBody .cBtn {
+  margin-top: 1rem;
+}
+
 .productItemBody section {
   display: -ms-grid;
   display: grid;

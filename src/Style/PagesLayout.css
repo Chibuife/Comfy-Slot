@@ -37,12 +37,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-decoration: none;
+  color: #102a42;
+}
+
+.layout nav :nth-child(3) :nth-child(1) :nth-child(2) {
+  margin-left: 1rem;
 }
 
 .layout nav :nth-child(3) :nth-child(1) .cart {
   position: relative;
   width: 40px;
   height: 50px;
+  padding-top: 15px;
 }
 
 .layout nav :nth-child(3) :nth-child(1) .cart .numberOfItems {
@@ -74,6 +84,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
+  color: #102a42;
+  margin-top: 2px;
+}
+
+.layout nav :nth-child(3) .login :nth-child(1) {
+  margin-left: 0.6rem;
+  margin-right: 0.5rem;
 }
 
 .layout nav .pagesLink {
@@ -84,20 +102,20 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 25%;
+  height: 100%;
 }
 
 .layout nav .pagesLink .link {
   text-decoration: none;
-  padding: 10px;
+  padding-bottom: 10px;
   color: #324d67;
-  font-size: 1rem;
+  font-size: 1.3rem;
   width: initial;
   cursor: pointer;
 }
 
 .layout nav .pagesLink .link:hover {
-  -webkit-box-shadow: 0px 1.5px #ab7a5f;
-          box-shadow: 0px 1.5px #ab7a5f;
+  border-bottom: 3px solid #ab7a5f;
 }
 
 .layout .navigation {
@@ -166,7 +184,149 @@
   color: white;
 }
 
-.layout .none {
+.layout .hamBurgerMenu {
   display: none;
+}
+
+.layout .navPageNone {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.layout .navPage {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: white;
+  position: fixed;
+  height: 110vh;
+  width: 100vw;
+  z-index: 100;
+  top: 0%;
+  padding-top: 1.5rem;
+}
+
+.layout .navPage .topBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout .navPage .topBar div {
+  font-weight: 1000;
+  font-size: 2.5rem;
+  color: #bb2525;
+  cursor: pointer;
+}
+
+.layout .navPage a {
+  text-decoration: none;
+  color: #102a42;
+}
+
+.layout .navPage a .link {
+  cursor: pointer;
+  width: 100%;
+  text-decoration: none;
+  padding: 0.6rem;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.layout .navPage a .link:hover {
+  padding: 1rem;
+  background-color: #bcccdc;
+}
+
+.layout .navPage .iconsCon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+
+.layout .navPage .iconsCon .cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  color: #102a42;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.layout .navPage .iconsCon .cart .shop {
+  position: relative;
+  width: 40px;
+  height: 50px;
+  margin-left: 1rem;
+  margin-top: 10px;
+}
+
+.layout .navPage .iconsCon .cart .shop .numberOfItems {
+  cursor: pointer;
+  position: absolute;
+  top: -15%;
+  right: -15%;
+  background-color: #ab7a5f;
+  height: 25px;
+  width: 25px;
+  border-radius: 50px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+}
+
+.layout .navPage .iconsCon .login {
+  font-size: 2rem;
+  margin-top: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #102a42;
+  margin-left: 1rem;
+}
+
+.layout .navPage .iconsCon .login div {
+  margin-right: 1rem;
+}
+
+@media (max-width: 770px) {
+  .layout .hamBurgerMenu {
+    display: block;
+    font-size: 2.5rem;
+    color: #ab7a5f;
+    cursor: pointer;
+  }
+  .layout nav .pagesLink {
+    display: none;
+  }
+  .layout nav :nth-child(3) :nth-child(1) {
+    display: none;
+  }
+  .layout nav :nth-child(3) .login {
+    display: none;
+  }
 }
 /*# sourceMappingURL=PagesLayout.css.map */

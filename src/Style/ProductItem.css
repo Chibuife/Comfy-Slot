@@ -15,6 +15,7 @@
   font-size: clamp(0.5rem, 2vw, 0.8rem);
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+  letter-spacing: 0.3;
 }
 
 .productItemBody .cBtn:hover {
@@ -24,6 +25,17 @@
 
 .productItemBody .cBtn {
   margin-top: 1rem;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: #eaded7;
+  background-color: #ab7a5f;
+  border-radius: 5px;
+  font-size: clamp(0.5rem, 2vw, 0.8rem);
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+  letter-spacing: 0.3;
 }
 
 .productItemBody section {
@@ -44,6 +56,10 @@
   width: 100%;
   height: 85%;
   border-radius: 10px;
+}
+
+.productItemBody section article .opacity {
+  opacity: 0.5;
 }
 
 .productItemBody section article .subimage {

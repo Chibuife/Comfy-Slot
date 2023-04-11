@@ -217,11 +217,19 @@
   border-radius: 5px;
   letter-spacing: 0.5rem;
   margin-top: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.cartBody .login:hover {
+  background-color: #c5a491;
+  color: #102a42;
 }
 
 .cartBody .clear {
   background-color: #222;
   color: white;
+  margin: 0;
 }
 
 .cartBody .sectionTwo {

@@ -193,11 +193,18 @@
          border-radius: 5px;
          letter-spacing: 0.5rem;
          margin-top: 10px;
+         transition: all 0.3s ;
+     }
+
+     .login:hover {
+         background-color: $clr-primary-7;
+         color: $clr-grey-1;
      }
 
      .clear {
          background-color: $clr-black;
          color: white;
+         margin: 0;
      }
 
      .sectionTwo {

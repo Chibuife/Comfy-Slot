@@ -157,7 +157,7 @@ console.log(state)
     }
     if (name === 'shipping') {
       value = e.target.checked
-      console.log(e)
+      
     }
     dispatch({ type: "FILTER", payload: { name, value } })
   }
@@ -197,7 +197,9 @@ console.log(state)
   ]
   return (
     <div className='productBody'>
-
+      <div className='navigation'>
+        <h1> <Link className='home' to="/"> Home </Link><Link className="path">/ Products</Link></h1>
+      </div>
       <section className='section2'>
 
         <div className='sideBar'>

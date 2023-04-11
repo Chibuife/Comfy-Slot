@@ -1,5 +1,6 @@
 // import { useEffect } from "react";
 import { useSelector } from "react-redux"
+import { Link } from "react-router-dom";
 
 const PaymentSlot = () => {
     let total = 0;
@@ -27,7 +28,7 @@ const PaymentSlot = () => {
                         <td>Order Total</td> <td>${(shipping + total).toFixed(2) }</td>
                 </tr>
             </table>
-            <button className="login" >LOGIN</button>
+                <Link className="login" to="/auth/login"> <button className="login"> LOGIN </button></Link>
             </div>
 
         </section>

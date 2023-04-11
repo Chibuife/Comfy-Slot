@@ -38,7 +38,7 @@ const counterSlice = createSlice({
                     color: color,
                     shipingFee: newItem.shipping,
                 })
-                state.totalQuantity++;
+                state.totalQuantity += number;
             }
 
         },
@@ -77,7 +77,8 @@ const counterSlice = createSlice({
         },
         clearCart(state){
             state.itemsList =[]
-            state.totalQuantity = 0
+            state.totalQuantity = 0;
+            state.subTotal= 0;
         }
     }
 })

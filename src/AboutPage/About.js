@@ -1,9 +1,13 @@
 import React from 'react'
 import "../Style/AboutPage.css"
 import AboutImage from "./Aboutimg/aboutImg.jpeg"
+import { Link } from 'react-router-dom'
 function About() {
   return (
     <div className='bodyAbout'>
+      <div className='navigation'>
+        <h1> <Link className='home' to="/"> Home </Link><Link   className="path">/ About</Link></h1>
+      </div>
         <section className='section2'>
             <div className='aboutImgContainer'>
                 <img src={AboutImage} alt="" />

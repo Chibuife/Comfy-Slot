@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Logo from '../Asset/subimages/logo.svg'
 import { Link, Outlet } from "react-router-dom";
 import { FaShoppingCart } from 'react-icons/fa'
@@ -6,11 +6,17 @@ import { FaUserPlus } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import '../Style/PagesLayout.css'
 import { useSelector } from 'react-redux';
-// import { IoCloseSharp } from 'react-icons/io'
+import { FaUserMinus } from 'react-icons/fa'
 import { IoClose } from 'react-icons/io5'
+import { logOut, monitorAuthState } from './utilis';
 const PagesLayout = () => {
     const totalQuantity = useSelector(state => state.totalQuantity)
     const [active, setActive] = useState(false)
+    const [login, setLogin] = useState(false)
+    useEffect(() => {
+        monitorAuthState(setLogin)
+    }, [])
+    console.log(login)
     return (
         <div className='layout'>
             <nav>
@@ -28,11 +34,19 @@ const PagesLayout = () => {
                             <div className='numberOfItems'>{0 + totalQuantity}</div>
                         </div>
                     </Link>
-                    <Link className='login' to={"/auth/login"}>
-                        <span>
-                        Login
-                        </span>
-                        <FaUserPlus />
+                    <Link className='login' to={login ? "" : "/auth/login"}>
+                        {login ?
+                            <span onClick={logOut}>
+                                Logout
+                            </span>
+                            :
+                            <span >
+                                Login
+                            </span>
+                        }
+                        {login ? <span onClick={logOut} ><FaUserMinus /> </span> : <span><FaUserPlus /> </span>}
+                        {/* <FaUserPlus /> */}
+                        {/* <FaUserMinus /> */}
                     </Link>
                 </div>
                 <div className='hamBurgerMenu' onClick={() => setActive(true)}><GiHamburgerMenu /></div>
@@ -58,9 +72,18 @@ const PagesLayout = () => {
                                 <div className='numberOfItems'>{0 + totalQuantity}</div>
                             </div>
                         </Link>
-                        <Link to={"/auth/login"} className='login'>
-                            <div>  Login</div>
-                            <FaUserPlus />
+                        <Link to={login ? "" : "/auth/login"} className='login'>
+                            {login ?
+                                <div onClick={logOut}>
+                                    Logout
+                                </div>
+                                :
+                                <div>
+                                    Login
+                                </div>
+                            }
+                            {login ? <span onClick={logOut} ><FaUserMinus /> </span> : <FaUserPlus />}
+
                         </Link>
                     </div>
                 </div>

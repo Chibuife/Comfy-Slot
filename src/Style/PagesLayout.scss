@@ -63,7 +63,6 @@
                 margin-top: 2px;
                 :nth-child(1) {
                     margin-left: 0.6rem;
-                    margin-right: 0.5rem;
                  }
              }
          }
@@ -253,12 +252,15 @@
                  div {
                      margin-right: 1rem;
                  }
+                 span{
+                    margin-top: 0.5rem;
+                 }
              }
          }
      }
  }
 
- @media (max-width: 770px) {
+ @media (max-width: 950px) {
      .layout .hamBurgerMenu {
          display: block;
          font-size: 2.5rem;

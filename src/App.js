@@ -12,6 +12,7 @@ import Login from "./Login";
 import { Authentication } from "./Email";
 import Signup from "./Signup";
 import { PasswordReset } from "./ForgottenPassword";
+import CheckOut from "./CheckoutPage/CheckOut";
 let numberOfItem = 0;
 function App() {
   const [passwordClose, setPasswordClose] = useState(false)
@@ -40,6 +41,10 @@ function App() {
         {
           path: "/cart",
           element: <Cart  />,
+        },
+        {
+          path: "/checkout",
+          element: <CheckOut />,
         }
       ]
     },

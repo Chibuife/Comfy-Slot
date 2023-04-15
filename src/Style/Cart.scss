@@ -193,12 +193,29 @@
          border-radius: 5px;
          letter-spacing: 0.5rem;
          margin-top: 10px;
-         transition: all 0.3s ;
      }
 
      .login:hover {
          background-color: $clr-primary-7;
          color: $clr-grey-1;
+     }
+
+     .checkout {
+         color: white;
+         background-color: $clr-primary-5;
+         padding: 10px 0;
+         width: 100%;
+         cursor: pointer;
+         border: none;
+         border-radius: 5px;
+         letter-spacing: 0.1rem;
+         margin-top: 10px;
+         transition: all 0.3s;
+         font-weight: 900;
+     }
+
+     .checkout:hover {
+         color: $clr-primary-1;
      }
 
      .clear {

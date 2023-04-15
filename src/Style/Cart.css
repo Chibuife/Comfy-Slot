@@ -217,13 +217,30 @@
   border-radius: 5px;
   letter-spacing: 0.5rem;
   margin-top: 10px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 .cartBody .login:hover {
   background-color: #c5a491;
   color: #102a42;
+}
+
+.cartBody .checkout {
+  color: white;
+  background-color: #ab7a5f;
+  padding: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 0.1rem;
+  margin-top: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight: 900;
+}
+
+.cartBody .checkout:hover {
+  color: #453227;
 }
 
 .cartBody .clear {

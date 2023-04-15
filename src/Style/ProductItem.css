@@ -198,10 +198,4 @@
   background: none;
   outline: none;
 }
-
-@media (max-width: 400px) {
-  .productItemBody {
-    margin: 0;
-  }
-}
 /*# sourceMappingURL=ProductItem.css.map */

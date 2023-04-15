@@ -16,11 +16,14 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .body .sectionOne .intro {
   height: 100%;
-  width: 50%;
+  width: 40%;
   z-index: 20;
 }
 

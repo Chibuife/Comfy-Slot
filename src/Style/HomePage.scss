@@ -15,10 +15,11 @@
         height: 90vh;
         width: 100%;
         display: flex;
+        justify-content: space-between;
 
         .intro {
             height: 100%;
-            width: 50%;
+            width: 40%;
             z-index: 20;
 
             .intro-text {

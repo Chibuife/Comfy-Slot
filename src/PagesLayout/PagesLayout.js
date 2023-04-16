@@ -25,6 +25,7 @@ const PagesLayout = () => {
                     <Link className='link' to='/'>Home</Link>
                     <Link className='link' to='about'>About</Link>
                     <Link className='link' to="/product">Product</Link>
+                {  login ?  <Link className='link' to="/checkout">Checkout</Link> : null}
                 </div>
                 <div>
                     <Link to={'/cart'}>
@@ -64,6 +65,8 @@ const PagesLayout = () => {
                     {/* */}
                     <Link to='about' onClick={() => setActive(false)} ><div className='link'> About</div></Link>
                     <Link to="/product" onClick={() => setActive(false)} > <div className='link'> Product</div></Link>
+                    {login ? <Link to="/checkout" onClick={() => setActive(false)} ><div className='link'> Checkout </div></Link> : null}
+
                     <div className='iconsCon'>
                         <Link className='cart' to={'/cart'} onClick={() => setActive(false)} >
                             <div> Cart</div>

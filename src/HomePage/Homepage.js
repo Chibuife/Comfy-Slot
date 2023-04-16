@@ -40,7 +40,7 @@ function Homepage() {
                     <div className='intro-text'>
                         <h1>Design Your Comfort Zone</h1>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, at sed omnis corporis doloremque possimus velit! Repudiandae nisi odit, aperiam odio ducimus, obcaecati libero et quia tempora excepturi quis alias?</p>
-                        <Link><div className='shopnow'>SHOP NOW</div></Link>
+                        <Link to='product'><div className='shopnow'>SHOP NOW</div></Link>
                     </div>
                 </div>
                 <div className='introImg'>
@@ -63,7 +63,7 @@ function Homepage() {
                                 <div className='image'>
                                     <div className='item-image' onMouseOver={() => setActiveIndex(index)} onMouseOut={() => setActiveIndex(!index)} >
                                         <img className={index === activeIndex ? "hover" : "pic"} src={item.image} alt="" />
-                                        <Link className={index === activeIndex ? 'searchContainer' : " none"} to={`product/${item.SKU}`}>
+                                        <Link  className={index === activeIndex ? 'searchContainer' : " none"} to={`product/${item.SKU}`}>
                                             <img className={index === activeIndex ? "img" : " none"} src={search} alt="" />
                                         </Link>
                                     </div>
@@ -76,7 +76,7 @@ function Homepage() {
                     }
                 </main>
 
-                <Link> <div className='allProduct'>All Products</div></Link> 
+                <Link to='product'> <div className='allProduct'>All Products</div></Link> 
             </section>
 
             <section className='sectionThree'>

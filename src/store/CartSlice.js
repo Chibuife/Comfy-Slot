@@ -8,6 +8,7 @@ const counterSlice = createSlice({
         ],
         totalQuantity: 0,
         subTotal: 0,
+        totalP: 0,
 
     },
     reducers: {
@@ -72,17 +73,20 @@ const counterSlice = createSlice({
             ||
                item.id !== it.id    
             );
-                state.totalQuantity -= 1
-                console.log(state.itemsList)
+            state.totalQuantity -= it.quantity
         },
         clearCart(state){
             state.itemsList =[]
             state.totalQuantity = 0;
             state.subTotal= 0;
+        },
+        addTotalP(state, action) {
+            console.log(action.payload,'total')
+            state.totalP = action.payload
         }
     }
 })
 
-export const { addToCart, adding, subtracting, removeItem, clearCart } = counterSlice.actions;
+export const { addToCart, adding, subtracting, removeItem, clearCart, addTotalP } = counterSlice.actions;
 
 export default counterSlice;

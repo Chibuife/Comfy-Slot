@@ -13,10 +13,15 @@ import { Authentication } from "./Email";
 import Signup from "./Signup";
 import { PasswordReset } from "./ForgottenPassword";
 import CheckOut from "./CheckoutPage/CheckOut";
+import { Model } from "./Model";
+import { monitorAuthState } from "./PagesLayout/utilis";
 let numberOfItem = 0;
 function App() {
   const [passwordClose, setPasswordClose] = useState(false)
-  
+  const [login, setLogin] = useState(false)
+  useEffect(() => {
+    monitorAuthState(setLogin)
+  }, [])
   const router = createBrowserRouter([
     {
       path: "/",
@@ -42,10 +47,10 @@ function App() {
           path: "/cart",
           element: <Cart  />,
         },
-        {
+        login ? {
           path: "/checkout",
           element: <CheckOut />,
-        }
+        }:null
       ]
     },
     {
